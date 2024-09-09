@@ -3,12 +3,57 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background: #F0EAD2;
+}
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+.home-section .welcome-message p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+header {
+    background-color: transparent;
+    color: #6C584C;
+    padding: 2rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0; /* Fixed Header */
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+}
+.home-image img {
+    width: 90%;
+    height: auto;
+
+}
+.home-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 1rem 0;
+.home-section .home-image {
+    flex: 1;
+}
+
+.home-section .welcome-message {
+    flex: 2;
+    padding-left: 10px;
+    margin-right: 20px;
+    padding-right: 20px;
+   
+}
+.container {
+    width: 60%;
+    height: 95vh;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 20px #A98467;
 }
 
 /* Add this to your style.css file */
@@ -25,11 +70,13 @@ nav ul {
 nav ul li {
     display: inline-block;
     position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: #6C584C;
     padding: 10px;
     display: block;
 }
@@ -44,6 +91,19 @@ nav ul li .submenu {
     padding: 0;
     margin: 0;
    
+}
+#categories ul li {
+  position: relative;
+    display: flex;
+    background-color: transparent;
+    padding: 20px;
+
+}
+#categories ul li a {
+    text-decoration: none;
+    color: black;
+   
+    
 }
 
 nav ul li .submenu li {
@@ -60,9 +120,10 @@ nav ul li:hover .submenu {
 }
 
 section {
-    padding: 2rem;
+   padding-top: 20%;
     text-align: center;
-    height: 100%;
+    padding-bottom: 0;
+
 }
 
 .product {
@@ -78,13 +139,165 @@ section {
     width: 100%;
     height: auto;
 }
+/* CSS for the contact form */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 50vh;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  form {
+    padding: 20px;
+    width: 500px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border: #ffffff;
+  }
+  .message-icon {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    margin-bottom: 10px;
+  }
+  
+  .message-icon i {
+    font-size: 20px;
+  }
+  
+  .message-icon span {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  form input,
+  textarea {
+    width: 100%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    color: #fff;
+    background: transparent;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .input-field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  .input-field i {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+  .input-field input {
+    font-size: 12px; /* Increase font size */
+    padding: 12px; /* Increase padding */
+    height: 30px; /* Set a specific height */
+  }
+  .input-field input,
+  .input-field textarea {
+    padding-left: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .send-btn {
+    background: #6C584C;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    padding: 6px 0;
+    width: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #A98467; /* Neon glow effect */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and transform */
+  }
+  
+  .send-btn:hover {
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+  }
+  
 
 footer {
-    background-color: #333;
-    color: white;
+    background-color: transparent;
+    color: #6C584C;
     text-align: center;
-    padding: 1rem 0;
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+@media (max-width: 500px) {
+    body {
+        display: block; /* Change to block layout */
+        max-width: 80%; /* Set a maximum width */
+      }
+    
+    .home-section {
+        flex-direction: column;
+    }
+    .home-section .home-image {
+        order: 2;
+    }
+    .home-section .welcome-message {
+        order: 1;
+    }
+    .home-section .welcome-message {
+        padding-left: 0;
+        margin-right: 0;
+        padding-right: 0;
+    }
+    .home-section .welcome-message p {
+        font-size: 1.2rem;
+    }
+    .home-image img {
+        width: 100%;
+    }
+    .home-section .welcome-message {
+        text-align: center;
+    }
+    .home-section .welcome-message h1 {
+        font-size: 2.5rem;
+    }
+    .home-section .welcome-message p {
+        font-size: 1.2rem;
+    }
+    .home-section .welcome-message button {
+        font-size: 1rem;
+    }
+    .home-section .welcome-message button {
+        padding: 10px 20px;
+    }
+    .home-section .welcome-message button {
+        margin-top: 20px;
+    }
+    .home-section .welcome-message button {
+        margin-bottom: 20px;
+    }
+    .home-section .welcome-message button {
+        margin-left: 0;
+    }
+    .home-section .welcome-message button {
+        margin-right: 0;
+    }
+    .home-section .welcome-message button {
+        display: block;
+    
+}
 }

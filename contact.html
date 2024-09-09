@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Bite Café</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+  </nav>
+</header>
+<div class="container">
+     <!-- Contact Section -->
+     <section id="contact">
+        <div class="details">
+          <h2>Connect Us</h2>
+          <p>If you have any questions, feel free to reach out!</p>
+        </div>
+        <div class="hero">
+          <form action="https://formspree.io/f/xldrljko" method="POST">
+            <div class="message-icon">
+              <i class="fas fa-envelope"></i>
+              <span></span>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input
+                type="text"
+                placeholder="Name"
+                name="Name"
+                autocomplete="family-name"
+              />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-phone"></i>
+              <input
+                type="text"
+                placeholder="Phone No."
+                name="Phone"
+                autocomplete="on"
+              />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input
+                type="text"
+                placeholder="Email Address"
+                name="Email"
+                autocomplete="off"
+              />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-comments"></i>
+              <textarea
+                name="Message"
+                placeholder="Message"
+                rows="10"
+              ></textarea>
+            </div>
+
+            <input type="submit" value="Send" class="send-btn" />
+          </form>
+        </div>
+        </section>
+</div>
+    <footer>
+        <p>© 2024 Fresh Bite Café. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
