@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+}
+
+/* Add this to your style.css file */
+nav ul {
+    list-style-type: none;
+    padding-right: 20px;
+    margin-right: 50px;
+    list-style: none;
+    display: flex;
+    justify-content: right;
+  
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+}
+
+nav ul li .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: transparent;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+   
+}
+
+nav ul li .submenu li {
+    display: inline-block;
+}
+
+nav ul li .submenu li a {
+    padding: 10px;
+    white-space: nowrap;
+}
+
+nav ul li:hover .submenu {
+    display: flex;
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+    height: 100%;
+}
+
+.product {
+    display: inline-block;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
