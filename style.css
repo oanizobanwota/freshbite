@@ -1,27 +1,36 @@
 body {
-	  background: #f6ebe8;
+	  background: #fff;
+}
+html, body {
+    margin: 0;
+    padding: 0;   
 }
 .container {
-    width: 75%;
-    height: 90vh;
-    background: #fff;
-    box-shadow: 0 0 20px #fff;
-    z-index: 1;
+  width: 75%;
+  box-shadow: 20px 0 20px -20px #864d25, -20px 0 20px -20px #864d25; /* Right and left shadows */
+  background-color: transparent !important;
 }
-
 /* Navbar Styles */
 .mynav {
-    background-color: #fff !important; 
+    background-color: transparent !important; 
+    margin-top: 10px;
+}
+.navbar-collapse {
+  margin-top: 10px;
 }
 .navbar-brand {
     margin-left: 100px;
     margin-top: 20px;
     background: transparent !important;
 }
+.image img {
+    width: 50px;
+    height: auto;
+}
 
 .navbar-brand img {
-    width: 200px;
-    height: 30px;
+    width: 250px;
+    height: 40px;
 }
 .mynav a {
   margin-right: 30px;
@@ -29,7 +38,7 @@ body {
   border: #fff 2px solid !important;
   background-color: #fff;
   padding: 0 5px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .mynav a:hover {
     background: #6d3b1c;
@@ -56,7 +65,7 @@ body {
   border-radius: 10px;
   color: #fff !important;
   padding: 0 5px;
-  background-color: #EF5B2A;
+  background-color: #6d3b1c;
 }
 .mrt .active a {
   border: #6d3b1c 2px solid !important;
@@ -65,6 +74,39 @@ body {
   padding: 0 5px;
   background-color: #6d3b1c;
 
+}
+/*Slider section */
+.carousel-caption {
+  margin-bottom: 25%;
+  /*background: rgba(109, 59, 28, 0.5);*/
+  z-index: 10;
+}
+.carousel-caption h5 {
+  font-size: 60px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+.carousel-caption p {
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+}
+.carousel-item img {
+  height: 78vh;
+  object-fit: cover;
+}
+.drk:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  opacity: 0.4;
+  z-index: 1;
 }
 /* Add this CSS for the dissolve effect */
 .dissolve {
@@ -96,25 +138,6 @@ body {
   gap: 20px; /* Space between the text and the image */
 }
 
-.welcome-message {
-  flex: 2; /* Allow the text content to take up two parts of the available space */
-  order: 2;
-}
-
-.slider {
-  flex: 1; /* Allow the image to take up one part of the available space */
-  order: 1;
-}
-
-.slider img {
-  max-width: 100%; /* Ensure the image does not overflow its container */
-  height: auto; /* Maintain the aspect ratio of the image */
-}
-.image img {
-  width: 50%;
-  height: auto;
-
-}
 .social-media {
   margin-bottom: 10px; /* Add some space above the icons */
 }
@@ -131,9 +154,10 @@ body {
   margin-right: 0; /* Remove margin from the last item */
 }
 .social-media i:hover {
-  transform: scale(1.4); /* Enlarge the icon on hover */
+  transform: scale(1.1); /* Enlarge the icon on hover */
 }
 .social-media i {
+  font-size: 30px; /* Increase the size of the icons */
   transition: transform 0.3s; /* Smooth transition for hover effect */
 }
 /* Specific colors for different platforms */
@@ -143,23 +167,18 @@ body {
 .social-media a.twitter {
   color: #1da1f2;
 }
-
 .social-media a.instagram {
   color: #e4405f;
 }
-
-
 .details {
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
 section {
-   padding-top: 10%;
     text-align: center;
-    padding-bottom: 0;
-
+    padding: 20px;
+    margin: 20px;
 }
-
 .product {
     display: inline-block;
     margin: 1rem;
@@ -223,7 +242,8 @@ section {
     border-top: none;
     border-right: none;
     border-left: none;
-    border-bottom: 1px solid #6d3b1c;
+    border: 1px solid #6d3b1c;
+    border-radius: 10px;
     outline: none;
     color: #6d3b1c;
     background: transparent;
@@ -250,6 +270,7 @@ section {
   }
   .input-field textarea {
     font-size: 15px; /* Increase font size */
+    height: 150px; /* Set a specific height */
   }
   .input-field input,
   .input-field textarea {
@@ -262,8 +283,8 @@ section {
     color: #fff;
     border: none;
     font-size: 16px;
-    padding: 6px 0;
     width: 100px;
+    height: 30px;
     border-radius: 10px;
     box-shadow: 0 0 5px #EF5B2A; /* Neon glow effect */
     transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and transform */
@@ -278,7 +299,61 @@ footer {
     background-color: transparent;
     color: #6C584C;
     text-align: center;
-    position: fixed;
-    width: 100%;
+    position: relative;
+  width: 100%;
     bottom: 0;
+}
+.vr_footer {
+    padding: 20px 0;
+    background-color: #f8f9fa;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between; /* Distribute space between columns */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+}
+
+.footer-column {
+    flex: 1 1 30%; /* Allow each column to take up approximately one-third of the space */
+    margin-right: 20px; /* Add some space between columns */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+.footer-column:last-child {
+    margin-right: 0; /* Remove margin from the last column */
+}
+
+.widget-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.menu {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.menu-item {
+    margin-bottom: 5px; /* Add some space between list items */
+}
+
+.menu-item a {
+    text-decoration: none; /* Remove underline from links */
+    color: #000; /* Set link color */
+}
+
+.menu-item a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+@media only screen and (max-width: 1140px) {
+  .navbar-brand {
+    margin-left: 10px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .mrt a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
 }
