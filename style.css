@@ -7,7 +7,7 @@ html, body {
 }
 .container {
   width: 75%;
-  box-shadow: 20px 0 20px -20px #864d25, -20px 0 20px -20px #864d25; /* Right and left shadows */
+  /* box-shadow: 20px 0 20px -20px #864d25, -20px 0 20px -20px #864d25; /* Right and left shadows */
   background-color: transparent !important;
 }
 /* Navbar Styles */
@@ -24,7 +24,7 @@ html, body {
     background: transparent !important;
 }
 .image img {
-    width: 50px;
+    width: 250px;
     height: auto;
 }
 
@@ -35,11 +35,31 @@ html, body {
 .mynav a {
   margin-right: 30px;
   color: #6d3b1c !important;
-  border: #fff 2px solid !important;
   background-color: #fff;
   padding: 0 5px;
   border-radius: 5px;
 }
+.abtnav a {
+  margin-right: 30px;
+  padding: 0 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #6d3b1c !important;
+ 
+}
+.abtnav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  padding: 20px;
+ 
+}
+.abtnav .active a {
+  background-color: #6d3b1c;
+  color: #fff !important;
+}
+
 .mynav a:hover {
     background: #6d3b1c;
     border-radius: 10px;
@@ -75,6 +95,58 @@ html, body {
   background-color: #6d3b1c;
 
 }
+.menu-item {
+  position: relative; /* Ensure the dropdown is positioned relative to the menu item */
+}
+
+.products-list {
+  display: none; /* Hide the products list by default */
+  position: absolute; /* Position the dropdown absolutely */
+  top: 100%; /* Position it below the menu item */
+  left: 50%; /* Center the dropdown */
+  transform: translateX(-50%); /* Center horizontally */
+  background-color: transparent; /* Background color for the dropdown */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for better visibility */
+  padding: 10px;
+  z-index: 1000; /* Ensure it appears above other elements */
+  width: auto; /* Set the width to auto */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.products-list ul {
+  display: flex; /* Display items in a row */
+  list-style: none; /* Remove bullet points */
+  margin: 0;
+  padding: 0;
+}
+
+.products-list li {
+  margin-right: 20px; /* Add some space between items */
+  text-align: center; /* Center the text */
+}
+.products-list li img {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin-bottom: 5px;
+}
+.products-list li a {
+  text-decoration: none; /* Remove underline from links */
+  color: #000; /* Set link color */
+}
+
+.products-list li a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+.menu-item:hover .products-list {
+  display: block; /* Show the products list on hover */
+}
+/*.products-list img {
+  width: 200px;
+  height: 200px;
+}*/
+
 /*Slider section */
 .carousel-caption {
   margin-bottom: 25%;
@@ -296,16 +368,19 @@ section {
   
 
 footer {
-    background-color: transparent;
+    background-color: transparent !important;
     color: #6C584C;
     text-align: center;
     position: relative;
-  width: 100%;
+    width: 60%;
     bottom: 0;
+  
+    
 }
 .vr_footer {
     padding: 20px 0;
-    background-color: #f8f9fa;
+  
+  
 }
 
 .footer-columns {
