@@ -149,7 +149,7 @@ html, body {
 
 /*Slider section */
 .carousel-caption {
-  margin-bottom: 25%;
+  margin-bottom: 15%;
   /*background: rgba(109, 59, 28, 0.5);*/
   z-index: 10;
 }
@@ -220,16 +220,18 @@ html, body {
   transition: transform 0.3s; /* Smooth transition for hover effect */
   color: inherit; /* Ensure the icons inherit the color */
   text-decoration: none; /* Remove underline from the icons */
+  border: none !important;
+  background-color: transparent !important;
 }
 
 .social-media a:last-child {
   margin-right: 0; /* Remove margin from the last item */
 }
 .social-media i:hover {
-  transform: scale(1.1); /* Enlarge the icon on hover */
+  transform: scale(1.2); /* Enlarge the icon on hover */
 }
 .social-media i {
-  font-size: 30px; /* Increase the size of the icons */
+  font-size: 50px; /* Increase the size of the icons */
   transition: transform 0.3s; /* Smooth transition for hover effect */
 }
 /* Specific colors for different platforms */
