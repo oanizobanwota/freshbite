@@ -66,6 +66,7 @@ html, body {
     padding: 0 5px;
     color: #fff !important;
     border: transparent 2px solid !important;
+    text-decoration: none !important;
 }
 .active a {
     border: #6d3b1c 2px solid !important;
@@ -90,16 +91,16 @@ html, body {
 .mrt .active a {
   border: #6d3b1c 2px solid !important;
   border-radius: 10px;
-  color: #fff !important;
+  color: #6d3b1c !important;
   padding: 0 5px;
-  background-color: #6d3b1c;
+  background-color: transparent;
 
 }
 .menu-item {
   position: relative; /* Ensure the dropdown is positioned relative to the menu item */
 }
 
-.products-list {
+.categories-list {
   display: none; /* Hide the products list by default */
   position: absolute; /* Position the dropdown absolutely */
   top: 100%; /* Position it below the menu item */
@@ -113,40 +114,47 @@ html, body {
   white-space: nowrap; /* Prevent text wrapping */
 }
 
-.products-list ul {
+.categories-list ul {
   display: flex; /* Display items in a row */
   list-style: none; /* Remove bullet points */
   margin: 0;
   padding: 0;
 }
 
-.products-list li {
+.categories-list li {
   margin-right: 20px; /* Add some space between items */
   text-align: center; /* Center the text */
 }
-.products-list li img {
+.categories-list li img {
   width: 200px;
   height: 200px;
   display: block;
   margin-bottom: 5px;
 }
-.products-list li a {
+.categories-list li a {
   text-decoration: none; /* Remove underline from links */
   color: #000; /* Set link color */
 }
 
-.products-list li a:hover {
+.categories-list li a:hover {
   text-decoration: underline; /* Add underline on hover */
 }
 
-.menu-item:hover .products-list {
+.menu-item:hover .categories-list {
   display: block; /* Show the products list on hover */
 }
 /*.products-list img {
   width: 200px;
   height: 200px;
 }*/
-
+.categories-list a {
+  text-decoration: none !important; /* Remove underline from links */
+  border: none !important;
+}
+.categories-list a:hover {
+  background: transparent !important;
+  color: #6d3b1c !important;
+}
 /*Slider section */
 .carousel-caption {
   margin-bottom: 15%;
