@@ -1,31 +1,210 @@
-body {
-	  background: #fff;
-}
-html, body {
+*{
     margin: 0;
-    padding: 0;   
+    padding: 0;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-family: "Merriweather", serif;
+} 
+html ::-webkit-scrollbar-track {
+    background: transparent;
+}
+html ::-webkit-scrollbar-thumb {
+    background: #B8BCBC;
+    border-radius: 10px;
+}
+html ::-webkit-scrollbar {
+    width: 10px;
+}
+header {
+    padding-bottom: 1%;
+    padding-top: 2%;
+}
+/* Home section */
+#home {
+  height: 87vh;
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(./assets/imgs/unsplash_5.jpg);
+  background-size: cover;
+  background-position: 70%;
+  background-repeat: no-repeat;
+}
+#home .content {
+  padding-top: 400px;
+  margin-left: 100px;
+  padding-left: 50px;
+}
+#home .content h5 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #fff;
+}
+#home .content p {
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
 }
 .container {
-  width: 75%;
-  /* box-shadow: 20px 0 20px -20px #864d25, -20px 0 20px -20px #864d25; /* Right and left shadows */
+  
   background-color: transparent !important;
+}
+.container-fluid {
+  background-color: #fff !important;
+  padding: 0;
+  margin: 0;
+}
+/* About section */
+#about {
+  width: 100%;
+  height: 87vh;
+}
+#about .container {
+  padding-top: 80px;
+}
+.heading {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #6d3b1c;
+  margin-bottom: 20px;
+}
+.heading span {
+  color: #000;
+}
+.about-nav {
+  padding-bottom: 30px;
+}
+.text-content {
+  font-size: 1rem;
+  color: #000;
+  padding-left: 30px;
+  padding-right: 30px;
+ text-align: justify;
+}
+/* Contact section */
+#contact {
+  width: 100%;
+  height: 87vh;
+}
+
+/* Categories section */
+#categories {
+  width: 100%;
+  height: 87vh;
+}
+.heading2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #6d3b1c;
+  margin-bottom: 20px;
+  padding-top: 40px;
+}
+.heading2 span {
+  color: #000;
+}
+#categories .container {
+  margin-top: 30px;
+}
+#categories .card {
+  border-radius: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+#categories .card img {
+  height: 300px;
+  border-radius: 10px;
+}
+#categories .card:hover {
+  transform: translateY(-10px);
+}
+.top p {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+  text-align: center;
+}
+picture img{
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+}
+/* CSS for the projects section */
+#drinks {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  padding-top: 40px;
+  padding-bottom: 100px;
+  justify-content: center;
+}
+.coffee-types {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1em;
+}
+
+.coffee-left {
+  flex-direction: row;
+}
+
+.coffee-right {
+  flex-direction: row-reverse;
+}
+
+.images-left {
+  flex: 1;
+  padding: 10px;
+}
+.images-right {
+  padding-left: 70px;
+}
+.images-left img,
+.images-right img {
+  width: 200px; /* Set a fixed width */
+  height: 150px; /* Set a fixed height to make it a square */
+  object-fit: cover; /* Ensure the image covers the entire area */
+  border-radius: 10px;
+  box-shadow: 0 0 15px #7198eb; /* Neon glow effect */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and transform */
+}
+
+img:hover {
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+.contents-right,
+.contents-left {
+  flex: 2;
+  padding: 10px;
+}
+
+.contents-right h3,
+.contents-left h3 {
+  margin-top: 0;
+}
+
+.contents-right p,
+.contents-left p {
+  margin: 0;
 }
 /* Navbar Styles */
 .mynav {
-    background-color: transparent !important; 
-    margin-top: 10px;
-}
-.navbar-collapse {
+  background-color: #fff;
   margin-top: 10px;
 }
+.navbar-collapse {
+  margin-top: 30px;
+  margin-left: 30px;
+  padding-left: 20px;
+}
 .navbar-brand {
-    margin-left: 100px;
+    margin-left: 50px;
     margin-top: 20px;
     background: transparent !important;
 }
 .image img {
-    width: 250px;
-    height: auto;
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
 }
 
 .navbar-brand img {
@@ -37,12 +216,16 @@ html, body {
   color: #6d3b1c !important;
   background-color: #fff;
   padding: 0 5px;
-  border-radius: 5px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: transparent 2px solid !important;
+  font-weight: bold;
+  font-size: large;
 }
 .abtnav a {
   margin-right: 30px;
   padding: 0 5px;
-  border-radius: 5px;
+  border-radius: 10px;
   text-decoration: none;
   color: #6d3b1c !important;
  
@@ -126,30 +309,25 @@ html, body {
   text-align: center; /* Center the text */
 }
 .categories-list li img {
-  width: 200px;
-  height: 200px;
-  display: block;
-  margin-bottom: 5px;
+  width: 130px;
+  height: 100px;
+  display: block; 
+  border-radius: 10px; /* Add rounded corners */
+  padding: 0;
 }
 .categories-list li a {
   text-decoration: none; /* Remove underline from links */
   color: #000; /* Set link color */
 }
 
-.categories-list li a:hover {
-  text-decoration: underline; /* Add underline on hover */
-}
-
 .menu-item:hover .categories-list {
   display: block; /* Show the products list on hover */
 }
-/*.products-list img {
-  width: 200px;
-  height: 200px;
-}*/
+
 .categories-list a {
   text-decoration: none !important; /* Remove underline from links */
   border: none !important;
+  background: none !important;
 }
 .categories-list a:hover {
   background: transparent !important;
@@ -175,6 +353,9 @@ html, body {
 .carousel-item img {
   height: 78vh;
   object-fit: cover;
+}
+.carousel-inner {
+  height: 78vh;
 }
 .drk:after {
   content: "";
@@ -217,19 +398,32 @@ html, body {
   align-items: flex-start; /* Align items at the start of the container */
   gap: 20px; /* Space between the text and the image */
 }
+/* Keyframe animation for breathing effect */
+@keyframes breathing {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
 
 .social-media {
   margin-bottom: 10px; /* Add some space above the icons */
+  text-align: left; /* Center the icons */
+  padding-left: 15%;  /* Add some space to the left */;
+
 }
 .social-media a {
   margin-right: 15px; /* Adjust the value as needed */
-  margin: 0 15px;
+  margin: 0 20px;
   font-size: 24px; /* Increase the size of the icons */
   transition: transform 0.3s; /* Smooth transition for hover effect */
   color: inherit; /* Ensure the icons inherit the color */
   text-decoration: none; /* Remove underline from the icons */
   border: none !important;
   background-color: transparent !important;
+  display: inline-block;
 }
 
 .social-media a:last-child {
@@ -239,28 +433,27 @@ html, body {
   transform: scale(1.2); /* Enlarge the icon on hover */
 }
 .social-media i {
-  font-size: 50px; /* Increase the size of the icons */
+  font-size: 40px; /* Increase the size of the icons */
   transition: transform 0.3s; /* Smooth transition for hover effect */
 }
 /* Specific colors for different platforms */
 .social-media a.facebook {
   color: #0a399e;
+  animation: breathing 2s infinite;
 }
 .social-media a.twitter {
   color: #1da1f2;
+  animation: breathing 2s infinite;
 }
 .social-media a.instagram {
   color: #e4405f;
+  animation: breathing 2s infinite;
 }
 .details {
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
-section {
-    text-align: center;
-    padding: 20px;
-    margin: 20px;
-}
+
 .product {
     display: inline-block;
     margin: 1rem;
@@ -378,18 +571,17 @@ section {
   
 
 footer {
-    background-color: transparent !important;
+    background-color: #B8BCBC !important;
     color: #6C584C;
-    text-align: center;
     position: relative;
-    width: 60%;
     bottom: 0;
+    padding-left: 16%;
+    margin-bottom: 0;
   
     
 }
 .vr_footer {
     padding: 20px 0;
-  
   
 }
 
